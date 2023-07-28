@@ -141,7 +141,10 @@ const Wrapper = styled.article`
         font-size: 1.5rem;
       }
     }
-  }
+  } 
 `
 
-export default CartItem
+export default CartItem 
+
+
+
