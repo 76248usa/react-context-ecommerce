@@ -11,6 +11,7 @@ import { SIDEBAR_CLOSE } from '../actions'
 
 const Sidebar = () => {
   const {isSidebarOpen, closeSidebar} = useProductsContext();
+  const {myUser} = useUserContext();
  
   return <SidebarContainer>
     
@@ -27,10 +28,11 @@ const Sidebar = () => {
             onClick={closeSidebar}>{text}</Link>
           </li>
         })}
-        <li>
+        {myUser && <li>
           <Link to='/checkout'
           onClick={closeSidebar}>checkout</Link>
-        </li>
+        </li>}
+        
       </ul>
       <CartButtons />
     </aside>
