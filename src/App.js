@@ -51,7 +51,7 @@ import {
 } from './pages';
 function App() {
   return (
-    
+    <AuthWrapper>
       <Router>
         <Navbar />
         <Sidebar />
@@ -61,11 +61,6 @@ function App() {
           <Route path='cart' element={<Cart />} />
           <Route path='products' exact element={<Products />} />
           <Route path='products/:id' element={<SingleProduct />} />
-          {/*<PrivateRoute exact
-            path='checkout'
-            element={ <Checkout />}
-  />*/}
-
           <Route
             path='checkout'
             element={
@@ -78,7 +73,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-   
+   </AuthWrapper>
   );
 }
 

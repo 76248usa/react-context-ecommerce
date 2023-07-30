@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
 import { ProductsProvider } from './context/products_context';
 import { FilterProvider } from './context/filter_context';
 import { CartProvider } from './context/cart_context';
@@ -16,8 +15,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 <Auth0Provider
-domain='dev-5sdxz8t2ogcdstl1.us.auth0.com'
-clientId='bGtGzfjFQhZYU1iGlqQ1MfJw2dJMw74E'
+domain={process.env.REACT_APP_AUTH_DOMAIN}
+clientId={process.env.REACT_APP_AUTH_CLIENT_ID}
 authorizationParams={{ 
     redirect_uri: window.location.origin
  }}>
